@@ -155,7 +155,7 @@ class OGCAPIRecordOutputSchema(BaseOutputSchema):
                 formats.append(format_)
 
         if formats:
-            record['properties']['formats'] = list(set([f[0] for f in formats]))
+            record['properties']['formats'] = list(set([f[0] for f in formats]))  # noqa
 
         record['properties']['contactPoint'] = mcf['contact']['main']['url']
 
